@@ -16,9 +16,9 @@ def BubSort(val):
     tmp=0
     for i in range(0,4):
         if val[i]>val[i+1]:
-            tmp = val[i+1]
+            '''tmp = val[i+1]
             val[i+1] = val[i]
-            val[i] = tmp
+            val[i] = tmp'''
 
 
 while(not IsSorted(val)):
