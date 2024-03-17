@@ -1,7 +1,13 @@
 from array import *
 
-val = array('i',[87,56,11,99,24])
+val = array('i',[])
+n = int(input('Enter number of array elements : '))
 
+for i in range(n):
+    x = int(input('Enter array values'))
+    val.append(x)
+
+#Function to check whether array is sorted or not
 def IsSorted(val):
     for i in range(0,4):
         if val[i]<=val[i+1]:
@@ -11,14 +17,12 @@ def IsSorted(val):
             break
     return True
 
-
+#Bubble Sort
 def BubSort(val):
     tmp=0
     for i in range(0,4):
         if val[i]>val[i+1]:
-            '''tmp = val[i+1]
-            val[i+1] = val[i]
-            val[i] = tmp'''
+            val[i],val[i+1] = val[i+1],val[i]
 
 
 while(not IsSorted(val)):
@@ -26,7 +30,6 @@ while(not IsSorted(val)):
 
 
 print("Below is the sorted array : ")
-
 
 for i in val:
     print(i,end=" ")
